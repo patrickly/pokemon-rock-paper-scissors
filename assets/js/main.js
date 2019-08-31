@@ -1,14 +1,20 @@
+var gameState = {
+	pokemon: ''
+};
+console.log(gameState);
 var pokemonsEl = document
 	.querySelector('.select-screen')
 	.querySelectorAll('.character');
 
 console.log(pokemonsEl);
-// https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
 var i = 0;
 while (i < pokemonsEl.length) {
 	pokemonsEl[i].onclick = function() {
 		var pokemonName = this.dataset.pokemon;
-		console.log('i pressed this pokemon ' + pokemonName);
+		gameState.pokemon = pokemonName;
+
+		console.log(gameState);
 	};
 	i++;
 }

@@ -38,94 +38,9 @@ body {
 h1 {
   font-weight: 100;
   font-size: 50px;
+  color: red;
 }
 
 * {
   box-sizing: border-box;
 }
-
-
-@keyframes fadeInLeft {
-  0% { 
-    opacity: 0;
-    transform: translate3d(-100px,0,0); 
-  }
-  100% { 
-    opacity: 1;
-    transform: translate3d(0,0,0); 
-  }
-}
-@keyframes fadeInTop {
-  0% { 
-    opacity: 0;
-    transform: translate3d(0,-100px,0); 
-  }
-  100% { 
-    opacity: 1;
-    transform: translate3d(0,0,0); 
-  }
-}
-@keyframes fadeInRight {
-  0% { 
-    opacity: 0;
-    transform: translate3d(100px,0,0); 
-  }
-  100% { 
-    opacity: 1;
-    transform: translate3d(0,0,0); 
-  }
-}
-@keyframes fadeInBottom {
-  0% { 
-    opacity: 0;
-    transform: translate3d(0,100px,0); 
-  }
-  100% { 
-    opacity: 1;
-    transform: translate3d(0,0,0); 
-  }
-}
-
-.parent {
-  text-align: center;
-  padding: 50px;
-}
-.button {
- border-radius: 3px;
- background: red;
- color: white;
- display: inline-block;
- padding: 15px 20px;
- margin-bottom: 100px;
-}
-.box {
-  margin: 0 auto;
-  background: black;
-  width: 200px;
-  height: 200px;
-  transition: all .6s ease-in-out;
-  // animation-name animation-duration animation-timing-function animation-delay 
-  // animation-iteration-count animation-direction animation-fill-mode and animation-play-state.
-  // animation: fadeInTop 1s ease-in-out 1 alternate forwards;
-  // animation: fadeInLeft 1s ease-in-out 1 alternate forwards;
-  // animation: fadeInRight 1s ease-in-out 2 alternate forwards;
-  // animation: fadeInBottom 1s ease-in-out 2 alternate forwards;
-
-
-
-
-}
-
-.fadeInRight {
-  animation: fadeInRight 1s ease-in-out 2 alternate forwards;
-}
-.fadeInLeft {
-  animation: fadeInLeft 1s ease-in-out 2 alternate forwards;
-}
-.fadeInBottom {
-  animation: fadeInBottom 1s ease-in-out 2 alternate forwards;
-}
-.fadeInTop {
-  animation: fadeInTop 1s ease-in-out 2 alternate forwards;
-}
-

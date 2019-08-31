@@ -42,10 +42,11 @@ var pokemonsEl = document
 
 console.log(pokemonsEl);
 var battleScreenEl = document.querySelector('#battle-screen');
-console.log('bsl', battleScreenEl);
-var i = 0;
+var attackBtnsEl = document.querySelectorAll('.attack');
+console.log(attackBtnsEl);
 
 // this is the initial loop
+var i = 0;
 while (i < pokemonsEl.length) {
 	// add function to all characters on screen select
 	pokemonsEl[i].onclick = function() {
@@ -100,6 +101,17 @@ while (i < pokemonsEl.length) {
 		// then who ever gets to health <= 0 loses
 	};
 	i++;
+}
+
+var a = 0;
+
+while (a < attackBtnsEl.length) {
+	attackBtnsEl[a].onclick = function() {
+		var attackName = this.dataset.attack;
+		gameState.currentUserAttack = attackName;
+		console.log(gameState);
+	};
+	a++;
 }
 
 var randomNumber = function(min, max) {

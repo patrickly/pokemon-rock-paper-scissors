@@ -1,5 +1,6 @@
 var gameState = {
-	pokemon: ''
+	userPokemon: '',
+	rivalPokemon: ''
 };
 console.log(gameState);
 var pokemonsEl = document
@@ -12,12 +13,21 @@ var i = 0;
 while (i < pokemonsEl.length) {
 	pokemonsEl[i].onclick = function() {
 		var pokemonName = this.dataset.pokemon;
-		gameState.pokemon = pokemonName;
+		gameState.userPokemon = pokemonName;
 
+		cpuPick();
 		console.log(gameState);
 	};
 	i++;
 }
+function randomNumber(min, max) {
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+function cpuPick() {
+	gameState.rivalPokemon = pokemonsEl[randomNumber(0, 3)].dataset.pokemon;
+}
+
 // // pokemon
 // // create data for 3 different pokemons, with their names, type, weaknesses, health, and attack moves(name, attack stat, maximum)
 // var pokemons = [

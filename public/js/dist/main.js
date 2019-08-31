@@ -58,6 +58,6 @@
     return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
 })({
     "./assets/js/main.js": function(module, exports) {
-        eval("class Test {\n  constructor() {\n    this.main = () => {\n      console.log(swag);\n    };\n  }\n\n}\n\nTest.main();\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+        eval("// pokemon\n// create data for 3 different pokemons, with their names, type, weaknesses, health, and attack moves(name, attack stat, maximum)\nvar pokemons = [{\n  name: 'charmander',\n  type: 'fire',\n  attack: 52,\n  stamina: 39,\n  level: 1\n}, {\n  name: 'charmander',\n  type: 'fire',\n  attack: 52,\n  stamina: 39,\n  level: 1\n}];\nvar attack = 20;\nvar level = 10;\nvar stack = 1.3;\nvar stamina = 39; // create a formula for attacks\n\nconsole.log(attack * level * stack / 7); // create a formula for health\n//HP = 0.20 x Sqrt(Pokemon_level) x (HP_base_stat)\n\nconsole.log(0.2 * Math.sqrt(level) * stamina * 15); // let user choose 1 and then assign a random pokemon to battle thats not the users pokemon\n// p1 vs p2\n// when one user loses all his health declare a winner\n\n//# sourceURL=webpack:///./assets/js/main.js?");
     }
 });

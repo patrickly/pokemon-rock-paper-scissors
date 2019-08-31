@@ -8,7 +8,8 @@ var pokemonsEl = document
 	.querySelectorAll('.character');
 
 console.log(pokemonsEl);
-
+var battleScreenEl = document.querySelector('#battle-screen');
+console.log('bsl', battleScreenEl);
 var i = 0;
 while (i < pokemonsEl.length) {
 	pokemonsEl[i].onclick = function() {
@@ -16,6 +17,7 @@ while (i < pokemonsEl.length) {
 		gameState.userPokemon = pokemonName;
 
 		cpuPick();
+		battleScreenEl.classList.toggle('active');
 		console.log(gameState);
 	};
 	i++;

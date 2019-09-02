@@ -39,7 +39,8 @@ var gameState = {
 		battleScreenEl: document.querySelector('#battle-screen'),
 		attackBtnsEl: document.querySelectorAll('.attack'),
 		p1NameEl: document.querySelector('.player1').querySelector('.name'),
-		p2NameEl: document.querySelector('.player2').querySelector('.name')
+		p2NameEl: document.querySelector('.player2').querySelector('.name'),
+		banner: document.querySelector('.fight-btn')
 	},
 	init: function() {
 		// this is the initial loop
@@ -370,6 +371,7 @@ var gameState = {
 	checkWinner: function(enemy, attacker) {
 		if (enemy.health <= 0) {
 			console.log('HEY WINNERRRRR' + attacker.name);
+			gameState.elements.banner.innerText = attacker.name + ' wins!';
 		}
 	},
 	randomNumber: function(min, max) {

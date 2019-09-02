@@ -367,8 +367,6 @@ display: flex;
 and (min-device-width : 0px) 
 and (max-device-width : 767px)  { 
 
-
-
   
   .select-screen .main {
 
@@ -398,6 +396,7 @@ and (max-device-width : 767px)  {
     // right: -211px;
     // width: 100%;
   }
+
 
   #battle-screen .cpu .player2 .stats{
     position: absolute;
@@ -468,4 +467,39 @@ and (max-device-width : 767px)  {
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
   }
+
+
+  #battle-screen .player .player1 img {
+    height: 100px;
+  }
+
+  #battle-screen .cpu .player2 img {
+    height: 100px;
+  }
+
+
+
+
+
+
+#battle-screen .battle-btns .rock,
+#battle-screen .battle-btns .paper,
+#battle-screen .battle-btns .scissors
+
+{
+
+  height: 80px;
+  width: 80px;
+  font-size: 8px;
+
+}
+
+#battle-screen .battle-btns .rock img,
+#battle-screen .battle-btns .paper img,
+#battle-screen .battle-btns .scissors img
+{
+  height: 40px;
+  width: 40px;
+}
+
 }

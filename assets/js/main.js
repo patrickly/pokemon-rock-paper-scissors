@@ -37,7 +37,9 @@ var gameState = {
 			.querySelector('.select-screen')
 			.querySelectorAll('.character'),
 		battleScreenEl: document.querySelector('#battle-screen'),
-		attackBtnsEl: document.querySelectorAll('.attack')
+		attackBtnsEl: document.querySelectorAll('.attack'),
+		p1NameEl: document.querySelector('.player1').querySelector('.name'),
+		p2NameEl: document.querySelector('.player2').querySelector('.name')
 	},
 	init: function() {
 		// this is the initial loop
@@ -62,13 +64,9 @@ var gameState = {
 				// cpu picks a pokemon
 				gameState.cpuPick();
 
-				var p1NameEl = (document
-					.querySelector('.player1')
-					.querySelector('.name').innerText = gameState.userPokemon);
+				gameState.elements.p1NameEl.innerText = gameState.userPokemon;
 
-				var p2NameEl = (document
-					.querySelector('.player2')
-					.querySelector('.name').innerText = gameState.rivalPokemon);
+				gameState.elements.p2NameEl.innerText = gameState.rivalPokemon;
 
 				// change screen to battle scene
 				gameState.elements.battleScreenEl.classList.toggle('active');

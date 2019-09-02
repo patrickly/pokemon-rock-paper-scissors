@@ -60,6 +60,8 @@ var gameState = {
 		gameState.elements.cpuHpEl.style.width = '100%';
 		gameState.elements.rematchEl.classList.remove('active');
 		gameState.elements.bannerEl.innerText = 'fight !';
+		gameState.elements.userHpEl.style.background = '#70F8A8';
+		gameState.elements.cpuHpEl.style.background = '#70F8A8';
 
 		var i = 0;
 		while (i < gameState.elements.pokemonsEl.length) {
@@ -373,10 +375,20 @@ var gameState = {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
 			gameState.elements.userHpEl.style.width =
 				(minusPercent < 0 ? 0 : minusPercent) + '%';
+			if (minusPercent < 50 && minusPercent > 20) {
+				gameState.elements.userHpEl.style.background = '#F6BF4E';
+			} else if (minusPercent < 20) {
+				gameState.elements.userHpEl.style.background = '#EB4931';
+			}
 		} else {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
 			gameState.elements.cpuHpEl.style.width =
 				(minusPercent < 0 ? 0 : minusPercent) + '%';
+			if (minusPercent < 50 && minusPercent > 20) {
+				gameState.elements.cpuHpEl.style.background = '#F6BF4E';
+			} else if (minusPercent < 20) {
+				gameState.elements.cpuHpEl.style.background = '#EB4931';
+			}
 		}
 		// console.log('atkAMt ', attackAmount);
 		gameState.checkWinner(enemy, attacker);

@@ -407,6 +407,81 @@ and (max-device-width : 767px)  {
     // width: 100%;
   }
 
+
+  #battle-screen .player .player1 .stats{
+    position: absolute;
+    background: #F8F8D8;
+    top:-100px;
+    left: -70px;
+    height: 80px;
+    width: 250px;
+    border-radius: 5px;
+    border: 5px solid #506858;
+    padding: 7.5px;
+  }
+
+  #battle-screen .player .player1 .stats{
+    position: absolute;
+    background: #F8F8D8;
+    top:-130px;
+    left: -65px;
+    height: 65px;
+    width: 150px;
+    border-radius: 5px;
+    border: 5px solid #506858;
+    padding: 7.5px;
+  }
+
+  #battle-screen .player .player1 .stats .name{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+  }
+
+  #battle-screen .player .player1 .stats .level{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    float: right;
+  }
+  #battle-screen .player .player1 .stats .health{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background: #506858;
+    border-radius: 5px;
+    padding: 5px;
+    color: #F8AE3E;
+    overflow: auto;
+    margin: 10px 0 0;
+  }
+  #battle-screen .player .player1 .stats .health .title{
+    width: 25%;
+    display: inline-block;
+    float: left;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar{
+    background: #10120C;
+    border-radius: 5px;
+    width: 75%;
+    display: inline-block;
+    height: 10px;
+    float: left;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar .inside{
+    background: #70F8A8;
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    float: left;
+    transition: all .5s ease-in-out;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+  }
+
+
+
+  
+
   #battle-screen .cpu .player2 .stats{
     position: absolute;
     background: #F8F8D8;
@@ -423,7 +498,7 @@ and (max-device-width : 767px)  {
     position: absolute;
     background: #F8F8D8;
     top:-130px;
-    left: 85px;
+    left: 5px;
     height: 65px;
     width: 150px;
     border-radius: 5px;

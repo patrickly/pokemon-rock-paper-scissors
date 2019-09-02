@@ -127,8 +127,14 @@ display: flex;
 #battle-screen .fight-btn{
   font-family: 'Bangers', cursive;
   text-transform: capitalize;
-  font-size: 200px;
+  font-size: 160px;
   text-align: center;
+  color: red;
+  background: blue;
+  position: relative;
+  top: -100px;
+  padding-top: 10px;
+  margin-bottom: 100px;
 }
 #battle-screen .battle-btns{
   text-align: center;
@@ -230,7 +236,7 @@ display: flex;
 #battle-screen .player .player1 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-200px;
+  top:-130px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -298,7 +304,7 @@ display: flex;
 #battle-screen .cpu .player2 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-200px;
+  top:-130px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -366,11 +372,11 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)  { 
 
   #battle-screen .player .player1 .stats{
-    top:-270px;
+    top:-200px;
     left: -70px;
   }
   #battle-screen .cpu .player2 .stats{
-    top:-270px;
+    top:-200px;
     left: -70px;
   }
 }

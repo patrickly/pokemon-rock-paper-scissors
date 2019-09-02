@@ -153,6 +153,7 @@ display: flex;
   margin: 0 auto;
   width: 20%;
   text-align: center;
+  cursor: pointer;
 }
 
 #battle-screen .battle-btns{
@@ -266,6 +267,7 @@ display: flex;
 #battle-screen .player .player1 .stats .name{
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+  text-transform: capitalize;
 }
 #battle-screen .player .player1 .stats .level{
   font-family: 'Press Start 2P', cursive;
@@ -334,6 +336,7 @@ display: flex;
 #battle-screen .cpu .player2 .stats .name{
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+  text-transform: capitalize;
 }
 #battle-screen .cpu .player2 .stats .level{
   font-family: 'Press Start 2P', cursive;
@@ -401,13 +404,11 @@ and (max-device-width : 1024px)  {
 
   #battle-screen .player img{
     height: 200px;
-    background: red;
     position: relative;
     left: -100px;
   }
   #battle-screen .cpu img{
     height: 200px;
-    background: red;
     position: relative;
     left: 100px;
   }

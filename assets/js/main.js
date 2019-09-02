@@ -39,10 +39,30 @@ var gameState = {
 		battleScreenEl: document.querySelector('#battle-screen'),
 		attackBtnsEl: document.querySelectorAll('.attack'),
 		p1NameEl: document.querySelector('.player1').querySelector('.name'),
-		p2NameEl: document.querySelector('.player2').querySelector('.name')
+		p2NameEl: document.querySelector('.player2').querySelector('.name'),
+		bannerEl: document.querySelector('.fight-btn'),
+		rematchEl: document.querySelector('.rematch-btn'),
+		userHpEl: document
+			.querySelector('.player1')
+			.querySelector('.health-bar')
+			.querySelector('.inside'),
+		cpuHpEl: document
+			.querySelector('.player2')
+			.querySelector('.health-bar')
+			.querySelector('.inside')
 	},
 	init: function() {
 		// this is the initial loop
+		// gameState.elements.bannerEl.style.fontSize = '120px';
+		console.log('rem ', gameState.elements.rematchEl);
+
+		gameState.elements.userHpEl.style.width = '100%';
+		gameState.elements.cpuHpEl.style.width = '100%';
+		gameState.elements.rematchEl.classList.remove('active');
+		gameState.elements.bannerEl.innerText = 'fight !';
+		gameState.elements.userHpEl.style.background = '#70F8A8';
+		gameState.elements.cpuHpEl.style.background = '#70F8A8';
+
 		var i = 0;
 		while (i < gameState.elements.pokemonsEl.length) {
 			// add function to all characters on screen select
@@ -117,6 +137,11 @@ var gameState = {
 			};
 			a++;
 		}
+		gameState.elements.rematchEl.onclick = function() {
+			console.log('$$ it works');
+			gameState.elements.battleScreenEl.classList.toggle('active');
+			gameState.init();
+		};
 	},
 	play: function(userAttack, cpuAttack) {
 		console.log('cpuA', cpuAttack);
@@ -346,22 +371,24 @@ var gameState = {
 		var attackAmount = attack * level * stack;
 		enemy.health -= attackAmount;
 
-		var userHP = document
-			.querySelector('.player1')
-			.querySelector('.health-bar')
-			.querySelector('.inside');
-
-		var cpuHP = document
-			.querySelector('.player2')
-			.querySelector('.health-bar')
-			.querySelector('.inside');
-
 		if (enemy.owner == 'user') {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
-			userHP.style.width = (minusPercent < 0 ? 0 : minusPercent) + '%';
+			gameState.elements.userHpEl.style.width =
+				(minusPercent < 0 ? 0 : minusPercent) + '%';
+			if (minusPercent < 50 && minusPercent > 20) {
+				gameState.elements.userHpEl.style.background = '#F6BF4E';
+			} else if (minusPercent < 20) {
+				gameState.elements.userHpEl.style.background = '#EB4931';
+			}
 		} else {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
-			cpuHP.style.width = (minusPercent < 0 ? 0 : minusPercent) + '%';
+			gameState.elements.cpuHpEl.style.width =
+				(minusPercent < 0 ? 0 : minusPercent) + '%';
+			if (minusPercent < 50 && minusPercent > 20) {
+				gameState.elements.cpuHpEl.style.background = '#F6BF4E';
+			} else if (minusPercent < 20) {
+				gameState.elements.cpuHpEl.style.background = '#EB4931';
+			}
 		}
 		// console.log('atkAMt ', attackAmount);
 		gameState.checkWinner(enemy, attacker);
@@ -370,6 +397,8 @@ var gameState = {
 	checkWinner: function(enemy, attacker) {
 		if (enemy.health <= 0) {
 			console.log('HEY WINNERRRRR' + attacker.name);
+			gameState.elements.bannerEl.innerText = attacker.name + ' wins!';
+			gameState.elements.rematchEl.classList.add('active');
 		}
 	},
 	randomNumber: function(min, max) {

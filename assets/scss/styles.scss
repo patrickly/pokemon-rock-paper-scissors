@@ -129,13 +129,31 @@ display: flex;
   text-transform: capitalize;
   font-size: 160px;
   text-align: center;
-  color: red;
+  color: white;
   background: blue;
   position: relative;
   top: -100px;
   padding-top: 10px;
   margin-bottom: 100px;
 }
+
+#battle-screen .rematch-btn{
+  visibility: hidden;
+}
+#battle-screen .rematch-btn.active{
+  visibility: visible;
+  color: white;
+  padding: 15px 10px;
+  border-radius: 15px;
+  background: green;
+  // display: inline;
+  position: relative;
+  top: -200px;;
+  margin: 0 auto;
+  width: 12%;
+  text-align: center;
+}
+
 #battle-screen .battle-btns{
   text-align: center;
   vertical-align: top;

@@ -41,12 +41,26 @@ var gameState = {
 		p1NameEl: document.querySelector('.player1').querySelector('.name'),
 		p2NameEl: document.querySelector('.player2').querySelector('.name'),
 		bannerEl: document.querySelector('.fight-btn'),
-		rematchEl: document.querySelector('.rematch-btn')
+		rematchEl: document.querySelector('.rematch-btn'),
+		userHpEl: document
+			.querySelector('.player1')
+			.querySelector('.health-bar')
+			.querySelector('.inside'),
+		cpuHpEl: document
+			.querySelector('.player2')
+			.querySelector('.health-bar')
+			.querySelector('.inside')
 	},
 	init: function() {
 		// this is the initial loop
 		// gameState.elements.bannerEl.style.fontSize = '120px';
 		console.log('rem ', gameState.elements.rematchEl);
+
+		gameState.elements.userHpEl.style.width = '100%';
+		gameState.elements.cpuHpEl.style.width = '100%';
+		gameState.elements.rematchEl.classList.remove('active');
+		gameState.elements.bannerEl.innerText = 'fight !';
+
 		var i = 0;
 		while (i < gameState.elements.pokemonsEl.length) {
 			// add function to all characters on screen select
@@ -123,6 +137,8 @@ var gameState = {
 		}
 		gameState.elements.rematchEl.onclick = function() {
 			console.log('$$ it works');
+			gameState.elements.battleScreenEl.classList.toggle('active');
+			gameState.init();
 		};
 	},
 	play: function(userAttack, cpuAttack) {
@@ -353,22 +369,14 @@ var gameState = {
 		var attackAmount = attack * level * stack;
 		enemy.health -= attackAmount;
 
-		var userHP = document
-			.querySelector('.player1')
-			.querySelector('.health-bar')
-			.querySelector('.inside');
-
-		var cpuHP = document
-			.querySelector('.player2')
-			.querySelector('.health-bar')
-			.querySelector('.inside');
-
 		if (enemy.owner == 'user') {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
-			userHP.style.width = (minusPercent < 0 ? 0 : minusPercent) + '%';
+			gameState.elements.userHpEl.style.width =
+				(minusPercent < 0 ? 0 : minusPercent) + '%';
 		} else {
 			var minusPercent = (enemy.health * 100) / enemy.originalHealth;
-			cpuHP.style.width = (minusPercent < 0 ? 0 : minusPercent) + '%';
+			gameState.elements.cpuHpEl.style.width =
+				(minusPercent < 0 ? 0 : minusPercent) + '%';
 		}
 		// console.log('atkAMt ', attackAmount);
 		gameState.checkWinner(enemy, attacker);

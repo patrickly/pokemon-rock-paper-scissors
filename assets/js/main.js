@@ -369,10 +369,13 @@ var gameState = {
 		return Math.floor(Math.random() * (max - min)) + min;
 	},
 	cpuPick: function() {
-		gameState.rivalPokemon =
-			gameState.elements.pokemonsEl[
-				gameState.randomNumber(0, 3)
-			].dataset.pokemon;
+		do {
+			gameState.rivalPokemon =
+				gameState.elements.pokemonsEl[
+					gameState.randomNumber(0, 3)
+				].dataset.pokemon;
+			console.log('looping ', this.rivalPokemon);
+		} while (gameState.userPokemon == gameState.rivalPokemon);
 	}
 };
 

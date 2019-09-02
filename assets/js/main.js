@@ -40,10 +40,13 @@ var gameState = {
 		attackBtnsEl: document.querySelectorAll('.attack'),
 		p1NameEl: document.querySelector('.player1').querySelector('.name'),
 		p2NameEl: document.querySelector('.player2').querySelector('.name'),
-		banner: document.querySelector('.fight-btn')
+		bannerEl: document.querySelector('.fight-btn'),
+		rematchEl: document.querySelector('.rematch-btn')
 	},
 	init: function() {
 		// this is the initial loop
+		// gameState.elements.bannerEl.style.fontSize = '120px';
+		console.log('rem ', gameState.elements.rematchEl);
 		var i = 0;
 		while (i < gameState.elements.pokemonsEl.length) {
 			// add function to all characters on screen select
@@ -371,7 +374,7 @@ var gameState = {
 	checkWinner: function(enemy, attacker) {
 		if (enemy.health <= 0) {
 			console.log('HEY WINNERRRRR' + attacker.name);
-			gameState.elements.banner.innerText = attacker.name + ' wins!';
+			gameState.elements.bannerEl.innerText = attacker.name + ' wins!';
 		}
 	},
 	randomNumber: function(min, max) {

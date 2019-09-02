@@ -266,6 +266,7 @@ display: flex;
 #battle-screen .player .player1 .stats .name{
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+  text-transform: capitalize;
 }
 #battle-screen .player .player1 .stats .level{
   font-family: 'Press Start 2P', cursive;
@@ -334,6 +335,7 @@ display: flex;
 #battle-screen .cpu .player2 .stats .name{
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
+  text-transform: capitalize;
 }
 #battle-screen .cpu .player2 .stats .level{
   font-family: 'Press Start 2P', cursive;

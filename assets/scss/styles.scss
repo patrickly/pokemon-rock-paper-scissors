@@ -230,7 +230,7 @@ display: flex;
 #battle-screen .player .player1 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-260px;
+  top:-200px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -298,7 +298,7 @@ display: flex;
 #battle-screen .cpu .player2 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-260px;
+  top:-200px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -361,7 +361,19 @@ display: flex;
 
 
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
 
+  #battle-screen .player .player1 .stats{
+    top:-270px;
+    left: -70px;
+  }
+  #battle-screen .cpu .player2 .stats{
+    top:-270px;
+    left: -70px;
+  }
+}
 
 @media only screen 
 and (min-device-width : 0px) 

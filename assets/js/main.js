@@ -121,6 +121,9 @@ var gameState = {
 			};
 			a++;
 		}
+		gameState.elements.rematchEl.onclick = function() {
+			console.log('$$ it works');
+		};
 	},
 	play: function(userAttack, cpuAttack) {
 		console.log('cpuA', cpuAttack);
@@ -375,6 +378,7 @@ var gameState = {
 		if (enemy.health <= 0) {
 			console.log('HEY WINNERRRRR' + attacker.name);
 			gameState.elements.bannerEl.innerText = attacker.name + ' wins!';
+			gameState.elements.rematchEl.classList.add('active');
 		}
 	},
 	randomNumber: function(min, max) {

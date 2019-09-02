@@ -141,6 +141,7 @@ display: flex;
   visibility: hidden;
 }
 #battle-screen .rematch-btn.active{
+  font-family: 'Press Start 2P', cursive;
   visibility: visible;
   color: white;
   padding: 15px 10px;
@@ -150,7 +151,7 @@ display: flex;
   position: relative;
   top: -200px;;
   margin: 0 auto;
-  width: 12%;
+  width: 20%;
   text-align: center;
 }
 
@@ -397,6 +398,19 @@ and (max-device-width : 1024px)  {
     top:-200px;
     left: -70px;
   }
+
+  #battle-screen .player img{
+    height: 200px;
+    background: red;
+    position: relative;
+    left: -100px;
+  }
+  #battle-screen .cpu img{
+    height: 200px;
+    background: red;
+    position: relative;
+    left: 100px;
+  }
 }
 
 @media only screen 
@@ -432,6 +446,39 @@ and (max-device-width : 767px)  {
     // right: -211px;
     // width: 100%;
   }
+
+
+  #battle-screen .fight-btn{
+    font-family: 'Bangers', cursive;
+    text-transform: capitalize;
+    font-size: 48px;
+    text-align: center;
+    color: white;
+    background: blue;
+    position: relative;
+    top: -100px;
+    padding-top: 15px;
+    margin-bottom: 100px;
+  }
+  
+  #battle-screen .rematch-btn{
+    // visibility: visible;
+  }
+  #battle-screen .rematch-btn.active{
+    display: block;
+    visibility: visible;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 15px;
+    background: green;
+    // display: inline;
+    position: relative;
+    top: -160px;
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+  }
+
 
   #battle-screen .battle-btns{
     display: flex;

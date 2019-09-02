@@ -61,6 +61,15 @@ var gameState = {
 
 				// cpu picks a pokemon
 				gameState.cpuPick();
+
+				var p1NameEl = (document
+					.querySelector('.player1')
+					.querySelector('.name').innerText = gameState.userPokemon);
+
+				var p2NameEl = (document
+					.querySelector('.player2')
+					.querySelector('.name').innerText = gameState.rivalPokemon);
+
 				// change screen to battle scene
 				gameState.elements.battleScreenEl.classList.toggle('active');
 

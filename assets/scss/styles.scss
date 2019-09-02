@@ -19,10 +19,8 @@ body {
 }
 /* SELECT SCREEN ============================================================*/
 .header{
-  background: #0a0618; /* Old browsers */
-background: -moz-linear-gradient(top, #0a0618 0%, #261c53 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, #0a0618 0%,#261c53 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, #0a0618 0%,#261c53 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #0a0618;
+
   position: fixed;
   color: white;
   font-size: 28px;
@@ -46,10 +44,7 @@ background: linear-gradient(to bottom, #0a0618 0%,#261c53 100%); /* W3C, IE10+, 
   position: relative;
 }
 .select-screen .main{
-  background: #76590b; /* Old browsers */
-background: -moz-linear-gradient(left, #76590b 0%, #cf9c11 10%, #ecb414 23%, #fafa74 35%, #fafafa 50%, #fafa74 65%, #ecb414 77%, #cf9c11 90%, #76590b 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #76590b 0%,#cf9c11 10%,#ecb414 23%,#fafa74 35%,#fafafa 50%,#fafa74 65%,#ecb414 77%,#cf9c11 90%,#76590b 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #76590b 0%,#cf9c11 10%,#ecb414 23%,#fafa74 35%,#fafafa 50%,#fafa74 65%,#ecb414 77%,#cf9c11 90%,#76590b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: #FCE8B7;
 width: 100%;
 padding: 100px 50px;
 overflow: auto;
@@ -103,7 +98,7 @@ display: flex;
 
 /* BATTLE SCREEN ============================================================*/
 #battle-screen{
-    background: url(//i.imgur.com/UZKEjzG.png) no-repeat center center; 
+    background: url('http://getwallpapers.com/wallpaper/full/0/0/2/122268.jpg') no-repeat center center; 
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;

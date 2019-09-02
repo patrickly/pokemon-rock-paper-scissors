@@ -230,7 +230,7 @@ display: flex;
 #battle-screen .player .player1 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-140px;
+  top:-260px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -298,7 +298,7 @@ display: flex;
 #battle-screen .cpu .player2 .stats{
   position: absolute;
   background: #F8F8D8;
-  top:-140px;
+  top:-260px;
   left: -70px;
   height: 100px;
   width: 300px;
@@ -347,7 +347,7 @@ display: flex;
   float: left;
   transition: all .5s ease-in-out;
 }
-#battle-screen .cpu .player1 .stats .health .health-bar{
+#battle-screen .cpu .player2 .stats .health .health-bar{
   font-family: 'Press Start 2P', cursive;
   font-size: 16px;
 }
@@ -366,8 +366,6 @@ display: flex;
 @media only screen 
 and (min-device-width : 0px) 
 and (max-device-width : 767px)  { 
-
-
 
   
   .select-screen .main {
@@ -398,4 +396,211 @@ and (max-device-width : 767px)  {
     // right: -211px;
     // width: 100%;
   }
+
+  #battle-screen .battle-btns{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    top: -120px;
+    // width: 100%;
+  }
+
+
+  #battle-screen .player .player1 .stats{
+    position: absolute;
+    background: #F8F8D8;
+    top:-100px;
+    left: -70px;
+    height: 80px;
+    width: 250px;
+    border-radius: 5px;
+    border: 5px solid #506858;
+    padding: 7.5px;
+  }
+
+  #battle-screen .player .player1 .stats{
+    position: absolute;
+    background: #F8F8D8;
+    top:-100px;
+    left: -55px;
+    height: 65px;
+    width: 150px;
+    border-radius: 5px;
+    border: 5px solid #506858;
+    padding: 7.5px;
+  }
+
+  #battle-screen .player .player1 .stats .name{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+  }
+
+  #battle-screen .player .player1 .stats .level{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    float: right;
+  }
+  #battle-screen .player .player1 .stats .health{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background: #506858;
+    border-radius: 5px;
+    padding: 5px;
+    color: #F8AE3E;
+    overflow: auto;
+    margin: 10px 0 0;
+  }
+  #battle-screen .player .player1 .stats .health .title{
+    width: 25%;
+    display: inline-block;
+    float: left;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar{
+    background: #10120C;
+    border-radius: 5px;
+    width: 75%;
+    display: inline-block;
+    height: 10px;
+    float: left;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar .inside{
+    background: #70F8A8;
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    float: left;
+    transition: all .5s ease-in-out;
+  }
+  #battle-screen .player .player1 .stats .health .health-bar{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+  }
+
+
+
+  
+
+  #battle-screen .cpu .player2 .stats{
+    position: absolute;
+    background: #F8F8D8;
+    top:-100px;
+    left: -5px;
+    height: 65px;
+    width: 150px;
+    border-radius: 5px;
+    border: 5px solid #506858;
+    padding: 7.5px;
+  }
+
+  #battle-screen .cpu .player2 .stats .name{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+  }
+
+  #battle-screen .cpu .player2 .stats .level{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    float: right;
+  }
+  #battle-screen .cpu .player2 .stats .health{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    background: #506858;
+    border-radius: 5px;
+    padding: 5px;
+    color: #F8AE3E;
+    overflow: auto;
+    margin: 10px 0 0;
+  }
+  #battle-screen .cpu .player2 .stats .health .title{
+    width: 25%;
+    display: inline-block;
+    float: left;
+  }
+  #battle-screen .cpu .player2 .stats .health .health-bar{
+    background: #10120C;
+    border-radius: 5px;
+    width: 75%;
+    display: inline-block;
+    height: 10px;
+    float: left;
+  }
+  #battle-screen .cpu .player2 .stats .health .health-bar .inside{
+    background: #70F8A8;
+    border-radius: 5px;
+    display: inline-block;
+    height: 10px;
+    float: left;
+    transition: all .5s ease-in-out;
+  }
+  #battle-screen .cpu .player2 .stats .health .health-bar{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+  }
+
+
+  #battle-screen .player .player1 img {
+    height: 100px;
+  }
+
+  #battle-screen .cpu .player2 img {
+    height: 100px;
+  }
+
+
+
+
+  #battle-screen .battle-btns .rock
+  {
+  
+    height: 100px;
+    width: 130px;
+    font-size: 8px;
+  
+  }
+
+#battle-screen .battle-btns .paper
+{
+
+  height: 100px;
+  width: 130px;
+  font-size: 8px;
+
+}
+
+
+#battle-screen .battle-btns .scissors
+
+{
+
+  height: 100px;
+  width: 100px;
+  font-size: 8px;
+
+}
+
+#battle-screen .battle-btns .rock img
+{
+  height: 40px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+#battle-screen .battle-btns .paper img
+{
+  height: 40px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+
+#battle-screen .battle-btns .scissors img
+{
+  height: 40px;
+  width: 35px;
+  margin-bottom: 10px;
+}
+
 }

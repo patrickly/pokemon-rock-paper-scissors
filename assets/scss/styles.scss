@@ -397,6 +397,15 @@ and (max-device-width : 767px)  {
     // width: 100%;
   }
 
+  #battle-screen .battle-btns{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    top: -290px;
+    // width: 100%;
+  }
 
   #battle-screen .cpu .player2 .stats{
     position: absolute;
@@ -480,26 +489,55 @@ and (max-device-width : 767px)  {
 
 
 
+  #battle-screen .battle-btns .rock
+  {
+  
+    height: 100px;
+    width: 130px;
+    font-size: 8px;
+  
+  }
 
-
-#battle-screen .battle-btns .rock,
-#battle-screen .battle-btns .paper,
-#battle-screen .battle-btns .scissors
-
+#battle-screen .battle-btns .paper
 {
 
-  height: 80px;
-  width: 80px;
+  height: 100px;
+  width: 130px;
   font-size: 8px;
 
 }
 
-#battle-screen .battle-btns .rock img,
-#battle-screen .battle-btns .paper img,
+
+#battle-screen .battle-btns .scissors
+
+{
+
+  height: 100px;
+  width: 100px;
+  font-size: 8px;
+
+}
+
+#battle-screen .battle-btns .rock img
+{
+  height: 40px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+#battle-screen .battle-btns .paper img
+{
+  height: 40px;
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+
 #battle-screen .battle-btns .scissors img
 {
   height: 40px;
-  width: 40px;
+  width: 35px;
+  margin-bottom: 10px;
 }
 
 }

@@ -54,7 +54,7 @@ var gameState = {
 	init: function() {
 		// this is the initial loop
 		// gameState.elements.bannerEl.style.fontSize = '120px';
-		console.log('rem ', gameState.elements.rematchEl);
+		//('rem ', gameState.elements.rematchEl);
 
 		gameState.elements.userHpEl.style.width = '100%';
 		gameState.elements.cpuHpEl.style.width = '100%';
@@ -121,7 +121,7 @@ var gameState = {
 					gameState.currentRivalPokemon
 				);
 
-				console.log('h', gameState);
+				//('h', gameState);
 			};
 			i++;
 		}
@@ -138,13 +138,13 @@ var gameState = {
 			a++;
 		}
 		gameState.elements.rematchEl.onclick = function() {
-			console.log('$$ it works');
+			//('$$ it works');
 			gameState.elements.battleScreenEl.classList.toggle('active');
 			gameState.init();
 		};
 	},
 	play: function(userAttack, cpuAttack) {
-		console.log('cpuA', cpuAttack);
+		//('cpuA', cpuAttack);
 		var currentPokemon = gameState.currentPokemon[0];
 		var currentRivalPokemon = gameState.currentRivalPokemon[0];
 		currentPokemon.owner = 'user';
@@ -366,7 +366,7 @@ var gameState = {
 		return 0.2 * Math.sqrt(user[0].level) * user[0].defense * user[0].hp;
 	},
 	attackMove: function(attack, level, stack, enemy, attacker) {
-		console.log(enemy.name, ' before: ', enemy.health);
+		//(enemy.name, ' before: ', enemy.health);
 
 		var attackAmount = attack * level * stack;
 		enemy.health -= attackAmount;
@@ -390,13 +390,13 @@ var gameState = {
 				gameState.elements.cpuHpEl.style.background = '#EB4931';
 			}
 		}
-		// console.log('atkAMt ', attackAmount);
+		// //('atkAMt ', attackAmount);
 		gameState.checkWinner(enemy, attacker);
-		console.log(enemy.name, ' after: ', enemy.health);
+		//(enemy.name, ' after: ', enemy.health);
 	},
 	checkWinner: function(enemy, attacker) {
 		if (enemy.health <= 0) {
-			console.log('HEY WINNERRRRR' + attacker.name);
+			//('HEY WINNERRRRR' + attacker.name);
 			gameState.elements.bannerEl.innerText = attacker.name + ' wins!';
 			gameState.elements.rematchEl.classList.add('active');
 		}
@@ -410,7 +410,7 @@ var gameState = {
 				gameState.elements.pokemonsEl[
 					gameState.randomNumber(0, 3)
 				].dataset.pokemon;
-			console.log('looping ', this.rivalPokemon);
+			//('looping ', this.rivalPokemon);
 		} while (gameState.userPokemon == gameState.rivalPokemon);
 	}
 };
